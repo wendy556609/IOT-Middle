@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>小夜燈世界</title>
+   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+   <script>
+      $(document).ready(function(){
+         $("[type = range]").change(function(){
+            var ledvalue = $("#led").val();
+            $(".ledvalue").text(ledvalue);
+         });
+      });
+      $(document).ready(function(){
+         $("[type = select]").change(function(){
+            var timevalue = $("#Date").val();
+            $(".timevalue").text(timevalue);
+         });
+      });
+   </script>
+<style>
+    
+        .whole1{
+            margin:20px 10px 10px 10px;
+            padding:10px;
+            color:yellow;
+            text-align:center;
+        }
+        .whole2{
+            margin:30px 10px 10px 10px;
+            padding:10px;
+            color:yellow;
+            text-align:center;
+        }
+        .whole3{
+            margin:20px 10px 5px 10px;
+            padding:10px;
+            color:yellow;
+            text-align:center;
+        }
+
+       
+        body {
+           background-color: rgb(25, 98, 206);
+        }
+        
+        .container {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+        }
+  
+        .btn {
+           padding: 0.3em 0.5em;
+           font-size: 1.5em;
+        }
+
+        .btn6 {
+           padding: 0.3em 0.5em;
+           font-size: 1.5em;
+        }
+
+        
+   .title3{text-align: center;color:yellow;text-shadow:0px 3px 5px #000;margin-bottom:50px; }
+   .title4{text-align: center;color:yellow;text-shadow:0px 3px 5px #000;margin-bottom:50px; }
+   .title5{text-align: center;color:yellow;text-shadow:0px 3px 5px #000;margin-bottom:50px; }
+   .title1{text-align:center;color:yellow;text-shadow:0px 3px 5px #000; margin-bottom: 40px;}
+   a{display:block;text-decoration:none;background-color:#FFFFFF;radius:3px;width:150px;text-align:center;margin:0 auto;margin-bottom:30px;font-size:2em;box-shadow: 0px 3px 6px #000;}
+   .btn1{color:black;background-color: white}
+   .btn2{color:black;background-color: gray}
+  
+   .title2{text-align:center;color:yellow;text-shadow:0px 3px 5px #000; margin-bottom: 50px;}
+   a{display:block;text-decoration:none;background-color:#FFFFFF;radius:3px;width:150px;text-align:center;margin:0 auto;margin-bottom:30px;font-size:2em;box-shadow: 0px 3px 6px #000;}
+   .btn3{color:black;background-color: red}
+   .btn4{color:black;background-color: orange}
+   .btn5{color:black;background-color: blue}
+</style>
+</head>
+
+       
+<body>
+    <div class="container">
+            
+        <!-- <h1>
+            <form>
+                <lable>
+                     <input type="text" style="font-size:18px;font-family:Microsoft JhengHei;padding:4px;text-align: center;width:75px;border-color:green;border-width:3px;border-style:dotted;" value="">
+                </lable> の小夜燈</h1>
+             </form>
+                       
+                <h1>Time Setting</h1> -->
+                        
+<!--             <form class="whole1">
+                <lable>
+                <h2>日期:</h2>
+                </lable>
+    
+            </form>
+                    
+            <table>
+                <thead>
+                    <tr>
+                    <th>
+                    <select id="日期" name="Months">
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        </select>
+                    </th>
+                    <th>
+                    <select id="日期" name="Days">
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option><!DOCTYPE html>
+                            <option value="6">06</option>
+                            <option value="7">07</option>
+                            <option value="8">08</option>
+                            <option value="9">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="4">16</option>
+                            <option value="5">17</option>
+                            <option value="6">18</option>
+                            <option value="7">19</option>
+                            <option value="8">20</option>
+                            <option value="9">21</option>
+                            <option value="10">22</option>
+                            <option value="11">23</option>
+                            <option value="12">24</option>
+                            <option value="7">25</option>
+                            <option value="8">26</option>
+                            <option value="9">27</option>
+                            <option value="10">28</option>
+                            <option value="11">29</option>
+                            <option value="12">30</option>
+                            <option value="12">31</option>
+                    </select>
+                    </th>
+                    </tr>
+                    </thead>
+                    </table>
+                    <br>
+
+            <form class="whole2">
+             <form>
+                <lable>
+                <h2>星期:</h2>
+                </lable>
+                        
+                            <h3 style="color:black;">
+                            <input type="radio" id="1" name="monday" value="first">
+                            <lable for="1">一</lable>
+                            <input type="radio" id="2" name="monday" value="first">
+                            <lable for="2">二</lable>
+                            <input type="radio" id="3" name="monday" value="first">
+                            <lable for="3">三</lable>
+                            <input type="radio" id="4" name="monday" value="first">
+                            <lable for="4">四</lable>
+                            <input type="radio" id="5" name="monday" value="first">
+                            <lable for="5">五</lable>
+                            <input type="radio" id="6" name="monday" value="first">
+                            <lable for="6">六</lable>
+                            <input type="radio" id="7" name="monday" value="first">
+                            <lable for="7">日</lable>
+                            </h3>
+            </form>
+                            
+            <form class="whole3">
+                            
+                <lable>
+                <h2>時間:</h2>
+                </lable>
+            </form>
+                    <table>
+                    <tr>
+                    <th>
+                            <select id="日期" name="Hours">
+                                    <option value="0">00</option>
+                                    <option value="1">01</option>
+                                    <option value="2">02</option>
+                                    <option value="3">03</option>
+                                    <option value="4">04</option>
+                                    <option value="5">05</option>
+                                    <option value="6">06</option>
+                                    <option value="7">07</option>
+                                    <option value="8">08</option>
+                                    <option value="9">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+            
+                            </select>
+                    </th>
+                    <th>
+                <lable>
+                    ：
+                </lable> -->
+                    </th>
+                    <th>
+                      <form action="timeDiming" method="get" id="Date">
+                                    <select type="select"  name="Mins"  class="timevalue">
+                                    <option value="0">00</option>
+                                    <option value="1">01</option>
+                                    <option value="2">02</option>
+                                    <option value="3">03</option>
+                                    <option value="4">04</option>
+                                    <option value="5">05</option>
+                                    <option value1="6">06</option>
+                                    <option value="7">07</option>
+                                    <option value="8">08</option>
+                                    <option value="9">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                    <option value="32">32</option>
+                                    <option value="33">33</option>
+                                    <option value="34">34</option>
+                                    <option value="35">35</option>
+                                    <option value="36">36</option>
+                                    <option value="37">37</option>
+                                    <option value="38">38</option>
+                                    <option value="39">39</option>
+                                    <option value="40">40</option>
+                                    <option value="41">41</option>
+                                    <option value="42">42</option>
+                                    <option value="43">43</option>
+                                    <option value="44">44</option>
+                                    <option value="45">45</option>
+                                    <option value="46">46</option>
+                                    <option value="47">47</option>
+                                    <option value="48">48</option>
+                                    <option value="49">49</option>
+                                    <option value="50">50</option>
+                                    <option value="51">51</option>
+                                    <option value="52">52</option>
+                                    <option value="53">53</option>
+                                    <option value="54">54</option>
+                                    <option value="55">55</option>
+                                    <option value="56">56</option>
+                                    <option value="57">57</option>
+                                    <option value="58">58</option>
+                                    <option value="59">59</option>
+
+                        </select>
+                        </form>
+                    </th>
+                    </tr>
+                    </table>
+
+           <br>
+           <button type="submit" form="Date" value="timeSubmit" class="btn6">Submit1</button>
+                   
+           <br>
+           <br>
+           <br>
+           
+           <h1>LED Setting</h1>
+           <br>
+                                
+           <h2 style="color:yellow;">亮度 = <span class='ledvalue'>0</span></h2>
+           <form action="ledDiming" method="get" id="form1">
+              <input type="range" name="ledval" id="led" min="0" max="255">
+           </form>
+           <br>
+           <button type="submit" form="form1" value="Submit" class="btn">Submit</button>
+           <br>
+           <br>
+           <br>
+           <!-- <h2 class="title1">開關</h2>
+           <a class="btn1" href="/H">ON</a>
+           <a class="btn2" href="/L">OFF</a> -->
+
+           <br>
+           <br>
+           <br>
+           <!-- <h2 class="title2">顏色</h2>
+         <a class="btn3" href="/RED">RED</a>
+         <a class="btn4" href="/ORANGE">ORANGE</a>
+         <a class="btn5" href="/BLUE">BLUE</a> -->
+         </div>
+         </table>
+</body>
+     
+</html>
